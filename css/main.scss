@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap");
+
+$color_1: #1d2027;
+$color_2: #363c49;
+$color_3: #323844;
+$color_4: #a91fb3;
+$color_5: #dc27e9;
+$padding: 4em;
+$font1: "Poppins", sans-serif;
+$font2: "Lora", serif;
+$desktop: 700px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(230, 230, 230);
+  font-family: $font1;
+  color: white;
+}
+
+header {
+  background-color: $color_2;
+  margin: 0 auto 0 auto;
+  height: 80vh;
+  width: 80vw;
+  border-radius: 5%;
+  h1 {
+    position: relative;
+    top: 20%;
+    text-align: center;
+  }
+
+  h2 {
+    position: relative;
+    top: 25%;
+    text-align: center;
+    font-family: $font2;
+  }
+}
+
+footer {
+  display: grid;
+  justify-items: center;
+  position: absolute;
+  height: 10vh;
+  width: 100vw;
+  background-color: $color_1;
+  left: 0;
+  bottom: 0;
+  ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    margin: 0 5vw 0 0;
+  }
+  #rluo {
+    font-size: 2vw;
+  }
+}
