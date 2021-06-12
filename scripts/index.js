@@ -25,4 +25,3 @@ function toggleNav () {
     ul.classList.toggle('hide-1')
 }
 
-

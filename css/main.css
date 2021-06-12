@@ -261,6 +261,8 @@ nav a:hover {
 @-webkit-keyframes vis-1 {
   0% {
     opacity: 0%;
+    -webkit-transform: translateY(-50em);
+            transform: translateY(-50em);
   }
   100% {
     opacity: 100%;
@@ -270,6 +272,8 @@ nav a:hover {
 @keyframes vis-1 {
   0% {
     opacity: 0%;
+    -webkit-transform: translateY(-50em);
+            transform: translateY(-50em);
   }
   100% {
     opacity: 100%;
