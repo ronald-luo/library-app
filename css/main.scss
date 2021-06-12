@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap");
 
 $color_1: #1d2027;
-$color_2: #363c49;
+$color_2: #4a5366;
 $color_3: #323844;
 $color_4: #a91fb3;
 $color_5: #dc27e9;
+$color_6: white;
 $padding: 4em;
 $font1: "Poppins", sans-serif;
 $font2: "Lora", serif;
@@ -23,73 +24,182 @@ $desktop: 700px;
 }
 
 body {
-  background-color: rgb(230, 230, 230);
+  background-color: $color_1;
   font-family: $font1;
-  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding: 2.5em;
+
+  img {
+    position: absolute;
+    height: auto;
+    max-width: 55%;
+    border-radius: 10% 0 0 0;
+  }
 }
 
 header {
-  background-color: $color_2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto 0 auto;
-  padding: 1em;
-  height: 80vh;
-  width: 80vw;
-  border-radius: 5%;
+  color: white;
+  border-radius: 10% 0 0 10%;
+  flex: 0 0 75%;
+  display: grid;
+  background-color: $color_3;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: $padding;
 
   h1 {
-    font-size: 9.708vw;
-    align-self: center;
+    z-index: 1;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 0;
+    justify-self: flex-start;
+    font-size: 2.5vw;
+
+    a {
+      color: $color_1;
+      text-decoration: none;
+    }
   }
 
   h2 {
-    text-align: center;
-    font-family: $font2;
-    font-size: 6vw;
-    align-self: center;
+    z-index: 1;
+    margin: 0;
+    font-size: 4vw;
+    grid-row: 3/2;
+    grid-column: 2/4;
   }
 
   #try-btn {
-    text-align: center;
+    z-index: 1;
     align-self: center;
-    margin: 0.5em;
-    background-color: red;
-    padding: 0.6em 2em 0.6em 2em;
-    border-radius: 5%;
+    justify-self: flex-start;
+    grid-row: 3/3;
+    grid-column: 2/2;
+    padding: 10px 45px 10px 45px;
+    border: 1px solid $color_6;
+    margin: 0 0 2em 0;
+    text-decoration: none;
+    color: $color_6;
+  }
+
+  #try-btn:hover {
+    background-color: $color_2;
+    cursor: pointer;
   }
 
   #code-btn {
-    text-align: center;
+    z-index: 1;
     align-self: center;
-    margin: 0.5em;
-    padding: 0.6em 2em 0.6em 2em;
-    border: solid 1px red;
+    justify-self: flex-start;
+    padding: 10px 22px 10px 22px;
+    grid-row: 3/3;
+    grid-column: 3/3;
+    border: 1px solid $color_6;
+    margin: 0 0 2em 0;
+    text-decoration: none;
+    color: $color_6;
+  }
+
+  #code-btn:hover {
+    background-color: $color_2;
+    cursor: pointer;
   }
 }
 
-footer {
+nav {
+  //   border-radius: 0 10% 10% 0;
+  flex: 0 0 25%;
+  background-color: $color_6;
   display: grid;
-  justify-items: center;
-  position: absolute;
-  height: 10vh;
-  width: 100vw;
-  background-color: $color_1;
-  left: 0;
-  bottom: 0;
+  //   grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
+  padding: $padding;
+
+  i {
+    justify-self: flex-end;
+    margin: 0 4em 0 0;
+  }
+
+  i:hover {
+    cursor: pointer;
+  }
+
+  ul {
+    grid-row: 2/2;
+    justify-self: flex-end;
+    line-height: 5.5vh;
+    text-align: right;
+    margin: 0 2em 0 0;
+  }
+
   ul li {
     list-style: none;
-    display: inline-block;
   }
+
   a {
+    background: linear-gradient(to bottom, $color_2 0%, $color_1 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 1px 2px;
+    color: #000;
     text-decoration: none;
-    color: white;
-    margin: 0 5vw 0 0;
-    font-size: 4vw;
+    transition: background-size 0.55s;
   }
-  #rluo {
-    font-size: 6.4721vw;
+
+  a:hover {
+    background-size: 4px 50px;
+    color: $color_6;
+  }
+}
+
+.hide-0 {
+  animation-name: hidden;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.hide-1 {
+  animation-name: hide-1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide-1 {
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes hidden {
+  100% {
+    background-color: $color_3;
+    border-radius: 0 10% 10% 0;
+  }
+}
+
+.vis-1 {
+  animation-name: vis-1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.vis-0 {
+  animation-name: vis;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes vis {
+  100% {
+    background-color: $color_6;
+    border-radius: 0;
+  }
+}
+
+@keyframes vis-1 {
+  100% {
+    opacity: 100%;
   }
 }
