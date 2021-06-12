@@ -30,6 +30,8 @@ body {
   display: flex;
   flex-direction: row;
   padding: 2.5em;
+  overflow-y: hidden;
+  height: 100vh;
 
   img {
     position: absolute;
@@ -169,6 +171,7 @@ nav {
 @keyframes hide-1 {
   100% {
     opacity: 0%;
+    transform: translateY(25em);
   }
 }
 
@@ -187,11 +190,15 @@ nav {
 
 .vis-0 {
   animation-name: vis;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 @keyframes vis {
+  0% {
+    background-color: $color_6;
+    border-radius: 0 10% 10% 0;
+  }
   100% {
     background-color: $color_6;
     border-radius: 0;
@@ -199,6 +206,9 @@ nav {
 }
 
 @keyframes vis-1 {
+  0% {
+    opacity: 0%;
+  }
   100% {
     opacity: 100%;
   }
