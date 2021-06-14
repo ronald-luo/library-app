@@ -25,3 +25,11 @@ function toggleNav () {
     ul.classList.toggle('hide-1')
 }
 
+let h = document.getElementById('h2');
+let c = document.querySelector('#header')
+c.addEventListener('mouseover', function(ev){
+    h.classList.add('slide-in')
+    h.setAttribute('style','position:absolute;')
+    h.style.transform += 'translateY('+(ev.clientY-150)+'px)';
+    h.style.transform += 'translateX('+(ev.clientX-100)+'px)';
+},false);

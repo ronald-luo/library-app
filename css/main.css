@@ -29,6 +29,29 @@ body img {
   border-radius: 10% 0 0 0;
 }
 
+#wave {
+  -webkit-animation-name: wave-in;
+          animation-name: wave-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes wave-in {
+  0% {
+    -webkit-transform: translateX(-50em);
+            transform: translateX(-50em);
+    opacity: 0.5;
+  }
+}
+
+@keyframes wave-in {
+  0% {
+    -webkit-transform: translateX(-50em);
+            transform: translateX(-50em);
+    opacity: 0.5;
+  }
+}
+
 header {
   color: white;
   border-radius: 10% 0 0 10%;
@@ -56,11 +79,59 @@ header h1 {
   margin: 0;
   justify-self: flex-start;
   font-size: 2.5vw;
+  -webkit-animation-name: h1;
+          animation-name: h1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 header h1 a {
   color: #1d2027;
   text-decoration: none;
+}
+
+@-webkit-keyframes h1 {
+  0% {
+    -webkit-transform: translateY(50em);
+            transform: translateY(50em);
+    opacity: 0;
+  }
+}
+
+@keyframes h1 {
+  0% {
+    -webkit-transform: translateY(50em);
+            transform: translateY(50em);
+    opacity: 0;
+  }
+}
+
+header .cover {
+  border-radius: 25px;
+  position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+header .slide-in {
+  -webkit-animation-name: cover;
+          animation-name: cover;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes cover {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes cover {
+  0% {
+    opacity: 0;
+  }
 }
 
 header h2 {

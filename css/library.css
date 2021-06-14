@@ -8,5 +8,18 @@
 
 body {
   background-color: #1d2027;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+}
+
+.library {
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto 0 auto;
+}
+
+.library h2 {
+  text-align: center;
 }
 /*# sourceMappingURL=library.css.map */

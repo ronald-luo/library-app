@@ -41,6 +41,18 @@ body {
   }
 }
 
+#wave {
+  animation-name: wave-in;
+  animation-duration: 1s;
+}
+
+@keyframes wave-in {
+  0% {
+    transform: translateX(-50em);
+    opacity: 0.5;
+  }
+}
+
 header {
   color: white;
   border-radius: 10% 0 0 10%;
@@ -58,10 +70,35 @@ header {
     margin: 0;
     justify-self: flex-start;
     font-size: 2.5vw;
-
+    animation-name: h1;
+    animation-duration: 1s;
     a {
       color: $color_1;
       text-decoration: none;
+    }
+  }
+
+  @keyframes h1 {
+    0% {
+      transform: translateY(50em);
+      opacity: 0;
+    }
+  }
+
+  .cover {
+    border-radius: 25px;
+    position: relative;
+    transition: transform 1s;
+  }
+
+  .slide-in {
+    animation-name: cover;
+    animation-duration: 3s;
+  }
+
+  @keyframes cover {
+    0% {
+      opacity: 0;
     }
   }
 
