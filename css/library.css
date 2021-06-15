@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;700&display=swap");
 *,
 *:before,
 *:after {
@@ -8,18 +8,179 @@
 
 body {
   background-color: #1d2027;
-  color: white;
   font-family: "Poppins", sans-serif;
-  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2.5em;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+nav {
+  background-color: black;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  padding: 4em;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  border-radius: 100px 0 0 20px;
+}
+
+nav .photo {
+  border-radius: 50%;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  margin: 1em auto 1em auto;
+}
+
+nav h2 {
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+
+nav ul {
+  padding: 0;
+  margin: 1em 0 1em 0;
+}
+
+nav li {
+  list-style: none;
+  display: block;
+  line-height: 6vh;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
 }
 
 .library {
-  width: 80vw;
-  height: 80vh;
-  margin: 0 auto 0 auto;
+  background-color: white;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  padding: 4em;
+  border-radius: 0 25px 25px 0;
 }
 
-.library h2 {
+.library .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.library .cta [type="search"] {
+  border-radius: 15px;
+  border: 1px solid grey;
+  height: 4vh;
+  width: 25vw;
+  text-indent: 1em;
+  outline: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.library .cta #cta-btn {
+  background-color: black;
+  display: inline;
+  padding: 1em 2em 1em 2em;
+  color: white;
+  cursor: pointer;
+}
+
+.library .add-book {
+  margin: 1em 0 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.library .add-book h1 {
+  font-size: 2.5vw;
+}
+
+.library .add-book #book-btn {
+  height: 50px;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 1em;
+}
+
+.library #current-num {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+.library .book-container {
+  margin: 0 auto 0 auto;
+  width: auto;
+  height: 40vh;
+  border: 0.7px solid #8a8a8a;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow-y: scroll;
+  padding: 2em 2em 0 2em;
+}
+
+.library .book-container .book-component {
+  background-color: #f8efee;
+  border-radius: 10%;
   text-align: center;
+  width: 25%;
+  height: 75%;
+  margin: 1em;
+}
+
+.library .book-container .book-component .exit {
+  cursor: pointer;
+  max-width: 100%;
+  position: relative;
+  height: 25px;
+  margin: 20px 0 0 0;
+}
+
+.library .book-container .book-component h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.library .book-container .book-component h4 {
+  color: #505050;
+  font-weight: normal;
+}
+
+.library .book-container .book-component h5 {
+  display: inline;
+  margin: 0 1em 0 1em;
+  font-weight: normal;
 }
 /*# sourceMappingURL=library.css.map */

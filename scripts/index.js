@@ -26,8 +26,8 @@ function toggleNav () {
 }
 
 let h = document.getElementById('h2');
-let c = document.querySelector('#header')
-c.addEventListener('mouseover', function(ev){
+let c = document.querySelector('#body')
+c.addEventListener('click', function(ev){
     h.classList.add('slide-in')
     h.setAttribute('style','position:absolute;')
     h.style.transform += 'translateY('+(ev.clientY-150)+'px)';
