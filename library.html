@@ -30,30 +30,30 @@
             <h1>Enter your book</h1>
             <img class="book-btn" id="book-btn" src="https://s2.svgbox.net/materialui.svg?ic=add_box">
         </div>
-        <p id='current-num'>Currently, there are <strong>3 books </strong>in your library.</p>
+        <p id='current-num'>Currently, there are <strong id='book-nums'>3 books</strong> in your library.</p>
 
         <div class="book-container">
 
         </div>
         
-            <form action="">
-                <label for="title">Title</label>
-                <input type='text' id='title'>
+        <form class='' action="">
+            <label for="title">Title</label>
+            <input type='text' id='title'>
+        
+            <label for="author">Author</label>
+            <input type='text' id='author'>
+        
+            <label for="pages">Pages</label>
+            <input type='number' id='pages'>
+        
+            <label for="read">Read</label>
+            <input type='checkbox' value='true' id='read'>
             
-                <label for="author">Author</label>
-                <input type='text' id='author'>
-            
-                <label for="pages">Pages</label>
-                <input type='number' id='pages'>
-            
-                <label for="read">Read</label>
-                <input type='checkbox' id='read'>
-                
-                <label for='rating'>Rating</label>
-                <input type="number" id="rating">
-            
-                <input type="submit" value="" id='sub-btn'>
-            </form>
+            <label for='rating'>Rating</label>
+            <input type="number" id="rating">
+        
+            <input type="submit" value="Add Book" id='sub-btn'>
+        </form>
 
     </header>
 </body>

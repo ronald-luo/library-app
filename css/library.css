@@ -136,7 +136,7 @@ nav a {
 .library .book-container {
   margin: 0 auto 0 auto;
   width: auto;
-  height: 40vh;
+  height: 45vh;
   border: 0.7px solid #8a8a8a;
   border-radius: 20px;
   display: -webkit-box;
@@ -156,7 +156,7 @@ nav a {
   border-radius: 10%;
   text-align: center;
   width: 25%;
-  height: 75%;
+  height: 80%;
   margin: 1em;
 }
 
@@ -176,11 +176,81 @@ nav a {
 .library .book-container .book-component h4 {
   color: #505050;
   font-weight: normal;
+  margin: 0;
 }
 
-.library .book-container .book-component h5 {
-  display: inline;
-  margin: 0 1em 0 1em;
+.library .book-container .book-component .stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.library .book-container .book-component .stats h5 {
   font-weight: normal;
+  text-align: center;
+}
+
+.library .book-container .book-component .stats .h5 {
+  height: 25px;
+}
+
+form {
+  opacity: 0%;
+  position: absolute;
+  -webkit-transform: translateY(-50em);
+          transform: translateY(-50em);
+  background-color: #4a5366;
+  top: 1em;
+  right: 25%;
+  width: 20vw;
+  padding: 2em;
+  border-radius: 25px;
+  color: white;
+}
+
+form label,
+form input {
+  display: block;
+}
+
+.visible {
+  opacity: 0;
+  -webkit-animation-name: addBookDisplay;
+          animation-name: addBookDisplay;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes addBookDisplay {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-35em);
+            transform: translateY(-35em);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes addBookDisplay {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-35em);
+            transform: translateY(-35em);
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 /*# sourceMappingURL=library.css.map */
