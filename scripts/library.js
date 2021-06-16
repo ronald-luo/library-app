@@ -5,7 +5,10 @@
         document.getElementById('sub-btn').addEventListener('click', formDataPasser)
     })
     document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('book-btn').addEventListener('click', bookAdder)
+        document.getElementById('book-btn').addEventListener('click', viewAdder)
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('exit-book-btn').addEventListener('click', hideAdder)
     })
 })()
 
@@ -111,6 +114,7 @@ function displayBook (books) {
         idPasser(testId, book)
         let temp = document.createElement('div')
         temp.classList.add('book-component')
+        temp.setAttribute('style', `background-color: ${randomColor()}`)
         temp.innerHTML = `
                    <img src='https://s2.svgbox.net/hero-outline.svg?ic=x' class='exit' id=${testId}>
                     <h3>${book.title}</h3>
@@ -174,19 +178,39 @@ function idPasser(id, book) {
     book.id = id
 }
 
-function bookAdder () {
+// 
+// 
+function viewAdder () {
     let form = document.querySelector('form')
+    let background = document.querySelector('.blur-background')
+    background.classList.toggle('blur-on')
     form.classList.toggle('visible')
-    if (form.classList.contains('visible')) {
-        document.getElementById('book-btn').src = "https://s2.svgbox.net/materialui.svg?ic=remove_circle"
-    } else {
-        document.getElementById('book-btn').src = "https://s2.svgbox.net/materialui.svg?ic=add_box"
-    }
 }
 
+function hideAdder () {
+    let form = document.querySelector('form')
+    let background = document.querySelector('.blur-background')
+
+    background.classList.toggle('blur-on')
+    form.classList.toggle('visible')
+}
+
+// Keeps track of the number of books by getting the number of book-components
+// Used when re-displaying books (ie. there is a change to the number of books)
 function bookNums () {
     let bookNums = document.getElementById('book-nums')
     let nodes = document.querySelectorAll('.book-component')
     let num = [...nodes]
     bookNums.textContent = `${num.length} books`
+}
+
+function randomColor() {
+    let colors = [
+        '#F8EFEE',
+        '#EAEBF7',
+        '#FBF8EE',
+    ]
+
+    randInt = Math.floor(Math.random() * colors.length)
+    return colors[randInt]
 }
