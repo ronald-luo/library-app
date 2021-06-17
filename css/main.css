@@ -77,7 +77,7 @@ header h1 {
   grid-column: 1/2;
   margin: 0;
   justify-self: flex-start;
-  font-size: 2.5vw;
+  font-size: 2.2vw;
   -webkit-animation-name: h1;
           animation-name: h1;
   -webkit-animation-duration: 1s;
@@ -167,7 +167,7 @@ header #try-btn:hover {
   cursor: pointer;
 }
 
-header #code-btn {
+header #learn-btn {
   z-index: 1;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -184,7 +184,7 @@ header #code-btn {
   color: white;
 }
 
-header #code-btn:hover {
+header #learn-btn:hover {
   background-color: #4a5366;
   cursor: pointer;
 }
@@ -346,6 +346,98 @@ nav a:hover {
             transform: translateY(-50em);
   }
   100% {
+    opacity: 100%;
+  }
+}
+
+.blur {
+  opacity: 0;
+  -webkit-transform: translateY(-100em);
+          transform: translateY(-100em);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.about {
+  opacity: 0;
+  -webkit-transform: translateY(-100em);
+          transform: translateY(-100em);
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  background-color: white;
+  width: 40vw;
+  height: 40vh;
+  left: 50%;
+  top: 50%;
+  margin: -20vh 0 0 -20vw;
+  z-index: 3;
+  padding: 2em;
+  display: grid;
+  -ms-grid-rows: 1/3fr 2/3fr;
+      grid-template-rows: 1/3fr 2/3fr;
+  -ms-grid-columns: 3/4fr 1/4fr;
+      grid-template-columns: 3/4fr 1/4fr;
+  border-radius: 10px;
+}
+
+.about h2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  margin: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.about img {
+  height: auto;
+  max-width: 25px;
+  cursor: pointer;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  justify-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 5px;
+}
+
+.about p {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.visibility {
+  -webkit-animation-name: visibility;
+          animation-name: visibility;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes visibility {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes visibility {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 100%;
   }
 }

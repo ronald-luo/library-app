@@ -84,7 +84,7 @@ function formDataPasser(e) {
         title: document.getElementById('title').value,
         author: document.getElementById('author').value,
         pages: document.getElementById('pages').value,
-        read: document.getElementById('read').value,
+        read: document.getElementById('read').checked,
         rating: document.getElementById('rating').value,
     }
 
@@ -178,8 +178,7 @@ function idPasser(id, book) {
     book.id = id
 }
 
-// 
-// 
+// This is used to bring up and hide the box for adding new cards
 function viewAdder () {
     let form = document.querySelector('form')
     let background = document.querySelector('.blur-background')
@@ -190,7 +189,6 @@ function viewAdder () {
 function hideAdder () {
     let form = document.querySelector('form')
     let background = document.querySelector('.blur-background')
-
     background.classList.toggle('blur-on')
     form.classList.toggle('visible')
 }
@@ -204,6 +202,8 @@ function bookNums () {
     bookNums.textContent = `${num.length} books`
 }
 
+// Generate a random color when called.
+// Used to generate random card colors.
 function randomColor() {
     let colors = [
         '#F8EFEE',

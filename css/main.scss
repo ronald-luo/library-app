@@ -68,7 +68,7 @@ header {
     grid-column: 1/2;
     margin: 0;
     justify-self: flex-start;
-    font-size: 2.5vw;
+    font-size: 2.2vw;
     animation-name: h1;
     animation-duration: 1s;
     a {
@@ -127,7 +127,7 @@ header {
     cursor: pointer;
   }
 
-  #code-btn {
+  #learn-btn {
     z-index: 1;
     align-self: center;
     justify-self: flex-start;
@@ -140,7 +140,7 @@ header {
     color: $color_6;
   }
 
-  #code-btn:hover {
+  #learn-btn:hover {
     background-color: $color_2;
     cursor: pointer;
   }
@@ -247,6 +247,71 @@ nav {
     transform: translateY(-50em);
   }
   100% {
+    opacity: 100%;
+  }
+}
+
+.blur {
+  opacity: 0;
+  transform: translateY(-100em);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.about {
+  opacity: 0;
+  transform: translateY(-100em);
+  display: grid;
+  position: absolute;
+  background-color: $color_6;
+  width: 40vw;
+  height: 40vh;
+  left: 50%;
+  top: 50%;
+  margin: -20vh 0 0 -20vw;
+  z-index: 3;
+  padding: $padding/2;
+  display: grid;
+  grid-template-rows: 1/3fr 2/3fr;
+  grid-template-columns: 3/4fr 1/4fr;
+  border-radius: 10px;
+
+  h2 {
+    grid-column: 1/3;
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  img {
+    height: auto;
+    max-width: 25px;
+    cursor: pointer;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+    align-self: flex-start;
+    margin: 5px;
+  }
+
+  p {
+    grid-column: 1/3;
+  }
+}
+
+.visibility {
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes visibility {
+  100% {
+    transform: translateY(0);
     opacity: 100%;
   }
 }
