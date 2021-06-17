@@ -185,7 +185,7 @@ nav {
 form {
   opacity: 0%;
   position: absolute;
-  transform: translateY(-50em);
+  transform: translateY(-100em);
   background-color: $color_2;
   top: 40%;
   left: 50%;
@@ -245,7 +245,7 @@ form {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  transform: translateY(-50em);
+  transform: translateY(-100em);
   background-color: rgba(0, 0, 0, 0.5);
 
   .visible {

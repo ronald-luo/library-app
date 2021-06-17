@@ -204,8 +204,8 @@ nav a {
 form {
   opacity: 0%;
   position: absolute;
-  -webkit-transform: translateY(-50em);
-          transform: translateY(-50em);
+  -webkit-transform: translateY(-100em);
+          transform: translateY(-100em);
   background-color: #4a5366;
   top: 40%;
   left: 50%;
