@@ -124,7 +124,7 @@ function displayBook (books) {
                     <h5>${book.read}</h5>
                     <h5>${book.rating}</h5>
                     <img src='https://s2.svgbox.net/hero-outline.svg?ic=book-open' class='h5'>
-                    <img src='https://s2.svgbox.net/materialui.svg?ic=check_box' class='h5'>
+                    ${readDisplay(book.read)}
                     <img src='https://s2.svgbox.net/hero-outline.svg?ic=star' class='h5'>
                     </div>
                     `
@@ -132,6 +132,12 @@ function displayBook (books) {
     })
     bookNums() // reset the display for the num books we curently have in the container
     deleteBookGetter() // When a book display occurs, reset their delete buttons
+}
+
+// Displays X or Checkmark depending on read status.
+// Used in displayBook function.
+function readDisplay (book) {
+    return (book) ? `<img src='https://s2.svgbox.net/materialui.svg?ic=check_box' class='h5'>` : `<img src='https://s2.svgbox.net/materialui.svg?ic=indeterminate_check_box' class='h5'>`
 }
 
 // Deletes all the data associated with a book
