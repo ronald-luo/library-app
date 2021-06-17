@@ -270,8 +270,8 @@ form [type="submit"]:hover {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  -webkit-transform: translateY(-50em);
-          transform: translateY(-50em);
+  -webkit-transform: translateY(-100em);
+          transform: translateY(-100em);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
